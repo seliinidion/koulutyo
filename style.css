@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Urbanist:wght@100&display=swap');
+
+* {
+    font-family: 'Urbanist', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    color: white;
+}
+
+:root {
+    --gray: rgb(177, 177, 177);
+}
+
+body {
+    background-color: black;
+}
+
+/* NAV ALKAA */
+
+.topnav {
+    float: right;
+}
+
+.topnav a {
+    font-size: 25px;
+    text-decoration: none;
+    display: none;
+}
+
+.topnav a.icon {
+    margin: 30px;
+    float: right;
+    width: auto;
+    display: block;
+}
+
+.dot {
+    font-family: 'Monoton', sans-serif;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 1px;
+    float: left;
+}
+
+.topnav.responsive {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    z-index: +2;
+    background-color: rgba(0, 0, 0, 0.607);
+}
+
+.topnav.responsive a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    padding: 20px;
+}
+
+
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0px;
+    margin: 10px;
+}
+
+
+.logo h1 {
+    position: absolute;
+    font-size: 40px;
+    margin: 20px;
+    font-family: 'Monoton', sans-serif;
+    }
+
+    .topnav.responsive .icon .dot:nth-child(1), .topnav.responsive .icon .dot:nth-child(2), .topnav.responsive .icon .dot:nth-child(3) {
+        margin-left: 5px;
+        transition: all 0.5s;
+        background-color: var(--gray);
+    }
+
+
+    .topnav.responsive a:hover {
+        font-family: 'Monoton', sans-serif;
+        color: var(--gray); 
+    }
+
+
+    /* NAV LOPPUU */
+
+
+    /* TOP ALKAA */
+    
+    .loading-box {
+        margin-top: 350px;
+        width: 10;
+        position: absolute;
+        margin-left: 45%;
+        text-align: center;
+        font-size: 25px;
+        animation: remove 18s;
+        opacity: 0;
+    }
+
+        /* TOP LOPPUU */
+
+        @keyframes remove {
+            0%{
+            opacity: 0;
+        }
+        12%{
+            opacity: 1;
+        }
+        15% {
+            opacity: 1;
+        }
+        16% {
+        opacity: 0;
+        }
+        }
+
+
+        .top-photos {
+            text-align: center;
+            margin-top: 135px;
+            position: absolute;
+            width: 80%;
+            margin-left: 10%;
+            z-index: 1;
+
+        }
+
+        .top-photos img {
+            height: 480px;
+        }
+
+
+        .top-photos img:nth-child(1), .top-photos:nth-child(2), .top-photos:nth-child(3), .top-photos:nth-child(4) {
+            opacity: 0;
+            animation: reveal 6.5s;
+            animation-delay: 1s;
+        }
+
+        .top-photos img:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .top-photos img:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        .top-photos img:nth-child(4) {
+            animation-delay: 3.5s;
+        }
+
+
+
+        @keyframes reveal {
+            0%{
+                opacity: 0;
+            }
+            30%{
+                opacity: 0;
+                transform: rotate3d(-285, 85, 30, 90deg)
+            }
+            45%{
+                opacity: 1;
+                transform: none;
+            }
+            91%{
+                opacity: 1;
+                transform: none;
+            }
+
+        }
+
+        .title {
+            margin-top: 300px;
+            position: absolute;
+            width: 80%;
+            margin-left: 15px;
+        }
+
+        .title h1 {
+            font-family: 'Monoton', sans-serif;
+            font-size: 80px;
+        }
+
+        .subtitle {
+            font-size: 25px;
+        }
+
+
+
+
+.top{
+    height: 750px;
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.688)),
+    url(./island.jpg);
+    background-size: cover;
+    animation: showing 15s;
+    animation-delay: 0s;
+    margin-bottom: 50px; /*kuvien väli*/
+}
+ 
+@keyframes showing {
+    0%{
+        height: 750px;
+        background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)),
+        url(./island.jpg);
+        background-size: cover;
+    }
+    80%{
+        height: 750px;
+        background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)),
+        url(./island.jpg);
+        background-size: cover;
+    }
+   100%{
+        height: 750px;
+        background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.688)),
+        url(./island.jpg);
+        background-size: cover;
+    }
+}
+
+
+
+.about {
+    height: 750px;
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.688)),
+    url(./simpukat2.jpg);
+    background-size: cover;
+}
+
+.about p {
+    padding: 280px;
+    line-height: 30px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.travel p {
+    color: var(--gray);
+    padding-top: 150px;
+    font-size: 120px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.travel span {
+    font-family: 'Monoton', sans-serif;
+    color: aliceblue;
+}
+
+.socialmedia .section {
+    height: 370px;
+    float: left;
+    width: 33.33%;   
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.socialmedia .container {
+    height: 280px;
+    overflow: hidden;
+}
+
+.socialmedia .container img {
+    width: 100%;
+    height: auto;
+}
+
+
+.gallery {
+    display: none;
+    z-index: 3;
+}
+
+.gallery.active {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    display: block;
+    background-color: black;
+}
+
+.gallery .image {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.image img {
+    height: 500px;
+    width: auto;
+}

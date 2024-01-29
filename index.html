@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--COUNTER-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<!--END-->
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Toisen päivän matskuja</title>
+</head>
+<body>
+
+    <!--Tästä alkaa nav-->
+
+    <nav>
+        <div class="logo">
+            <h1>TAITOTALO</h1>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="icon" onclick="DisplayMenu()">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            </a>
+
+            <a href="#" onclick="DisplayGallery()">GALLERY</a>
+            <a href="#">ABOUT</a>
+            <a href="#">TRAVEL</a>
+            <a href="#">CONTACT</a>
+            <a href="#">SOCIAL MEDIA</a>
+
+        </div>
+
+    </nav>
+
+<script>
+
+    function DisplayMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "topnav"
+        }
+
+    }
+
+</script>
+
+    <!--Tähän loppuu nav-->
+
+
+
+    <!--Tästä alkaa top-->
+<div class="top">
+<div class="loading-box">
+<div class="loading">Loading</div>
+<div class="counter">100</div>%
+    </div>
+
+
+<div class="top-photos">
+<img src="./palmu.jpg" alt="palmu">
+<img src="./lehdet.jpg" alt="lehdet">
+<img src="./ocean.jpg" alt="meri">
+<img src="./coconus.jpg" alt="kookokset">
+</div>
+<!--tähän loppuu top-->
+
+
+<div class="title">
+    <h1>WEB DESIGN</h1>
+    <div class="subtitle">SCROLL DOWN <br>
+            &#X2193;
+</div>
+</div>
+</div>
+<div class="about">
+    <p data-aos="fade-down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illum nesciunt enim perferendis ipsum ab. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est, sunt ullam officiis quas commodi neque quidem, amet facilis fugiat dolore. Amet nesciunt ducimus nostrum iste, earum sapiente officia reprehenderit!
+    </p>
+</div>
+
+
+
+
+
+<div class="travel">
+    <p data-aos="fade-down">
+TERVETULOA MINUN <br> 
+<span>MATKAILU</span> <br>
+SIVUILLE!
+</div>
+
+</p>
+</div>
+
+
+<center>
+    <p style="font-size: 80px; font-family: 'Monoton', sans-serif; padding: 30px;">OTA YHTEYTTÄ</p>
+    <p style="font-size: 25px;">yritys@yritys.fi</p>
+</center>
+
+
+
+
+
+<!--SOSMEDIA ALKAA-->
+
+
+<center>
+<div class="socialmedia">
+    <p style="font-size: 80px; font-family: 'Monoton', sans-serif; padding: 30px;">SOCIAL MEDIA</p>
+
+    <div class="section">
+    <div class="container">
+        <img src="./facebook.jpg" alt="facebook">
+    </div>
+    <br>
+    FACEBOOK
+    </div>
+    <div class="section">
+        <div class="container">
+            <img src="./linkedin.jpg" alt="linkkari">
+        </div>
+        <br>
+        LINKEDIN
+        </div>
+        <div class="section">
+            <div class="container">
+                <img src="./instagram.jpg" alt="instagram">
+            </div>
+            <br>
+            INSTAGRAM
+            </div>
+        </div>
+    </center>
+
+
+
+
+<center>
+    <!--kuvagalleria alkaa-->
+    <div class="gallery" id="portfolio">
+        <div style="height: 750px;">
+            <p style="font-size: 80px; font-family: 'Monoton', sans-serif; padding: 30px;">MAISEMA MEDIA</p>
+            <div class="image">
+                <img src="./maisema1.jpg" alt="maisema">
+
+    <img src="./maisema1.jpg" alt="maisema">
+
+<img src="./maisema1.jpg" alt="maisema">
+</div>
+</div>
+</div>
+
+</center>
+
+
+
+
+
+
+
+
+<!--SOSMEDIA LOPPUU-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+    AOS.init({
+        duration: 1000, 
+    });
+    
+  </script>
+
+
+
+
+
+<!--PORTFOLIO ALKAA-->
+<script>
+
+    function DisplayGallery() {
+        var x = document.getElementById("portfolio");
+        if (x.className === "gallery") {
+            x.className += " active";
+        }
+        else {
+            x.className = "gallery"
+        }
+
+    }
+
+</script>
+<!--PORTFOLIO LOPPUU-->
+
+
+
+
+<script>
+    $(document).ready(function () {
+     $('.counter').counterUp({
+      delay: 13,
+      time: 1600
+     });
+    });
+
+</script>
+
+
+
+
+    
+</body>
+</html>
